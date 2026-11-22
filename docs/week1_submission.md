@@ -1,5 +1,0 @@
-# Week 1 milestone summary — Research + architecture design
-
-Designed the initial architecture for an educational AI-powered disease prediction and symptom checker. Reviewed three implementation references covering ensemble classification, SHAP explainability, and FastAPI services. Inspected the provided healthcare dataset (800 records, 17 columns, 8 diagnosis categories), and identified accompanying labelled text samples and example test cases. Planned a Streamlit frontend, FastAPI backend, preprocessing pipeline, candidate baseline models, and SHAP-based explanations. Defined a stratified 70:15:15 train/validation/test split and an evaluation plan covering per-class precision, recall, F1-score, confusion matrix, ROC-AUC, calibration, and false-negative analysis. Prepared a README, repository folder structure, starter API/UI, and runnable dataset inspection script.
-
-**Status:** Week 1 scaffold prepared; model training, performance evaluation, clinical validation, and complete prediction UI are future work. Publish the repository URL only after creating and pushing the GitHub repository.
