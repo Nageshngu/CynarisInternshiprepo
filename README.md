@@ -69,3 +69,14 @@ python -m unittest discover -s tests
 
 ## Limitations
 This model uses clinical measurements in addition to symptoms. Data provenance, licensing and medical validity are unverified. The API/UI and SHAP per-prediction explanations are planned work, not Week 3 deliverables. Do not publish patient data without authorization.
+
+
+## Week 6: Core model + experimentation
+- Three Random Forest hyperparameter configurations trained and compared.
+- Reproducible script: `python scripts/train_week6.py`
+- Full evidence: `reports/week6_experiments.json` and `docs/week6_experiment_report.md`
+- Submission summary: `docs/week6_submission.md`
+- Selected model: `models/week6_best_random_forest.joblib`
+- MLflow support is coded, but MLflow was unavailable during packaging; after installing requirements, rerun the training script to create real MLflow experiment logs.
+- View tracking runs with `mlflow ui --backend-store-uri ./mlruns` after rerunning.
+
