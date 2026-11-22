@@ -16,3 +16,13 @@ def split_data(df, random_state=42):
         X_temp, y_temp, test_size=0.50, stratify=y_temp, random_state=random_state
     )
     return (X_train, X_val, X_test), (y_train, y_val, y_test)
+
+
+def make_preprocessor(X):
+    categorical = [c for c in CATEGORICAL if c in X.columns]
+    numeric = [c for c in X.columns if c not in categorical]
+    return ColumnTransformer([
+        ('numeric', Pipeline([('imputer', SimpleImputer(strategy='median')), ('scaler', StandardScaler())]), numeric),
+        ('categorical', Pipeline([('imputer', SimpleImputer(strategy='most_frequent')), ('encoder', OneHotEncoder(handle_unknown='ignore'))]), categorical)
+    ])
+
