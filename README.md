@@ -37,9 +37,6 @@ streamlit run frontend/app.py
 4. Add calibrated probabilities, abstention, SHAP, red-flag handling, and clinician-reviewed safety content.
 5. Integrate FastAPI inference with Streamlit, with privacy safeguards.
 
-# AI-Powered Disease Prediction and Symptom Checker
-
-**Week 1 + Week 3 milestones completed (educational prototype).** Not a medical device. Predictions must not be used for diagnosis, treatment, or decisions to delay medical care.
 
 ## Week 3: Data pipeline + baseline model
 - CSV ingestion and validation: `src/data_pipeline.py`
