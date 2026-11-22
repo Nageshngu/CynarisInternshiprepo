@@ -37,5 +37,38 @@ streamlit run frontend/app.py
 4. Add calibrated probabilities, abstention, SHAP, red-flag handling, and clinician-reviewed safety content.
 5. Integrate FastAPI inference with Streamlit, with privacy safeguards.
 
-## GitHub
-Create a repository named `AI-Disease-Prediction-Symptom-Checker`, then commit this folder. Review whether you have permission to publish the supplied data before pushing `data/raw/` to a public repository.
+# AI-Powered Disease Prediction and Symptom Checker
+
+**Week 1 + Week 3 milestones completed (educational prototype).** Not a medical device. Predictions must not be used for diagnosis, treatment, or decisions to delay medical care.
+
+## Week 3: Data pipeline + baseline model
+- CSV ingestion and validation: `src/data_pipeline.py`
+- Stratified 70/15/15 split; preprocessing fitted only on training data
+- Logistic Regression baseline and majority-class benchmark: `scripts/train_baseline.py`
+- Saved model: `models/baseline_logistic_regression.joblib`
+- Machine-readable results: `reports/metrics.json`
+- Full report: `docs/week3_baseline_report.md`
+- Ready-to-adapt milestone summary: `docs/week3_submission.md`
+- Basic automated checks: `tests/test_pipeline.py`
+
+**Measured results:** 800 records, 8 labels; validation accuracy 80.83%, held-out test accuracy 80.00%, majority-class test benchmark 12.50%. Dataset-only results; no clinical validation.
+
+## Reproduce Week 3
+Requires Python 3.10+.
+```bash
+python -m pip install -r requirements.txt
+python scripts/train_baseline.py
+python -m unittest discover -s tests
+```
+
+## Week 1 materials retained
+- `docs/research_review.md`: three technical references
+- `docs/architecture.md`: planned FastAPI + Streamlit + SHAP design
+- `docs/evaluation_plan.md`: evaluation plan and safety constraints
+- `docs/week1_submission.md`: Week 1 summary
+- `scripts/inspect_dataset.py`: data inspection
+- `backend/main.py` and `frontend/app.py`: starter placeholders (not integrated prediction apps)
+- `data/raw/`: supplied dataset and reference samples
+
+## Limitations
+This model uses clinical measurements in addition to symptoms. Data provenance, licensing and medical validity are unverified. The API/UI and SHAP per-prediction explanations are planned work, not Week 3 deliverables. Do not publish patient data without authorization.
