@@ -1,0 +1,7 @@
+[
+  "tests/test_week9_integration.py::TestWeek9Integration::test_health",
+  "tests/test_week9_integration.py::TestWeek9Integration::test_invalid_value_rejected",
+  "tests/test_week9_integration.py::TestWeek9Integration::test_missing_feature_rejected",
+  "tests/test_week9_integration.py::TestWeek9Integration::test_prediction",
+  "tests/test_week9_integration.py::TestWeek9Integration::test_warning_signs"
+]
