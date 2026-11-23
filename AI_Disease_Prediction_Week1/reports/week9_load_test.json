@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-11-23T10:28:51.335546+00:00",
+  "url": "http://127.0.0.1:8000/predict",
+  "concurrency": 50,
+  "requests": 200,
+  "successful": 200,
+  "failed": 0,
+  "elapsed_seconds": 12.74,
+  "throughput_requests_per_second": 15.7,
+  "mean_latency_ms": 2930.53,
+  "p50_latency_ms": 2614.52,
+  "p95_latency_ms": 5796.07,
+  "p99_latency_ms": 7719.57,
+  "status_counts": {
+    "200": 200
+  }
+}

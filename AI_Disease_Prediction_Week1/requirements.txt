@@ -1,0 +1,16 @@
+pandas>=2.0,<3.0
+scikit-learn>=1.4,<2.0
+fastapi>=0.110,<1.0
+uvicorn>=0.27,<1.0
+streamlit>=1.35,<2.0
+shap>=0.45,<1.0
+
+# Week 6 experiment tracking (install to enable run logging)
+mlflow>=2.15,<4.0
+
+
+
+# Week 9 integration and load testing
+requests>=2.31,<3.0
+httpx>=0.27,<1.0
+pytest>=8.0,<10.0

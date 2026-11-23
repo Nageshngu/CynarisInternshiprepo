@@ -1,0 +1,207 @@
+{
+  "dataset_rows": 800,
+  "classes": [
+    "Anaemia",
+    "Gastroenteritis",
+    "Healthy",
+    "Hypertension",
+    "Influenza",
+    "Migraine",
+    "Pneumonia",
+    "Type2Diabetes"
+  ],
+  "split": {
+    "train": 560,
+    "validation": 120,
+    "test": 120
+  },
+  "model": "LogisticRegression(max_iter=2000, random_state=42)",
+  "benchmark": "DummyClassifier(strategy=most_frequent)",
+  "validation": {
+    "model": {
+      "accuracy": 0.8083,
+      "balanced_accuracy": 0.8083,
+      "macro_precision": 0.8115,
+      "macro_recall": 0.8083,
+      "macro_f1": 0.8068
+    },
+    "dummy": {
+      "accuracy": 0.125,
+      "balanced_accuracy": 0.125,
+      "macro_precision": 0.0156,
+      "macro_recall": 0.125,
+      "macro_f1": 0.0278
+    }
+  },
+  "test": {
+    "model": {
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8,
+      "macro_precision": 0.813,
+      "macro_recall": 0.8,
+      "macro_f1": 0.7989
+    },
+    "dummy": {
+      "accuracy": 0.125,
+      "balanced_accuracy": 0.125,
+      "macro_precision": 0.0156,
+      "macro_recall": 0.125,
+      "macro_f1": 0.0278
+    }
+  },
+  "classification_report": {
+    "Anaemia": {
+      "precision": 0.7142857142857143,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6896551724137931,
+      "support": 15.0
+    },
+    "Gastroenteritis": {
+      "precision": 0.8461538461538461,
+      "recall": 0.7333333333333333,
+      "f1-score": 0.7857142857142857,
+      "support": 15.0
+    },
+    "Healthy": {
+      "precision": 0.7,
+      "recall": 0.9333333333333333,
+      "f1-score": 0.8,
+      "support": 15.0
+    },
+    "Hypertension": {
+      "precision": 0.6,
+      "recall": 0.8,
+      "f1-score": 0.6857142857142857,
+      "support": 15.0
+    },
+    "Influenza": {
+      "precision": 0.9166666666666666,
+      "recall": 0.7333333333333333,
+      "f1-score": 0.8148148148148148,
+      "support": 15.0
+    },
+    "Migraine": {
+      "precision": 0.7272727272727273,
+      "recall": 0.5333333333333333,
+      "f1-score": 0.6153846153846154,
+      "support": 15.0
+    },
+    "Pneumonia": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 15.0
+    },
+    "Type2Diabetes": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 15.0
+    },
+    "accuracy": 0.8,
+    "macro avg": {
+      "precision": 0.8130473692973692,
+      "recall": 0.8,
+      "f1-score": 0.7989103967552244,
+      "support": 120.0
+    },
+    "weighted avg": {
+      "precision": 0.8130473692973692,
+      "recall": 0.8,
+      "f1-score": 0.7989103967552244,
+      "support": 120.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      0,
+      3,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      11,
+      3,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      12,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      3,
+      0,
+      11,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      5,
+      0,
+      8,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      15,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      15
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "Anaemia",
+    "Gastroenteritis",
+    "Healthy",
+    "Hypertension",
+    "Influenza",
+    "Migraine",
+    "Pneumonia",
+    "Type2Diabetes"
+  ]
+}

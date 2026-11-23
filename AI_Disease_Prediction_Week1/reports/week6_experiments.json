@@ -1,0 +1,254 @@
+{
+  "dataset_rows": 800,
+  "split": {
+    "train": 560,
+    "validation": 120,
+    "test": 120
+  },
+  "selection_metric": "validation_macro_f1",
+  "runs": [
+    {
+      "run": "RF_1",
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": 5,
+        "min_samples_leaf": 2
+      },
+      "train": {
+        "accuracy": 0.8946428571428572,
+        "balanced_accuracy": 0.8946428571428572,
+        "macro_precision": 0.8958064888092617,
+        "macro_recall": 0.8946428571428572,
+        "macro_f1": 0.8943973540002796
+      },
+      "validation": {
+        "accuracy": 0.85,
+        "balanced_accuracy": 0.8500000000000001,
+        "macro_precision": 0.8529235019366599,
+        "macro_recall": 0.8500000000000001,
+        "macro_f1": 0.8480211379494897
+      }
+    },
+    {
+      "run": "RF_2",
+      "parameters": {
+        "n_estimators": 200,
+        "max_depth": 10,
+        "min_samples_leaf": 2
+      },
+      "train": {
+        "accuracy": 0.9803571428571428,
+        "balanced_accuracy": 0.9803571428571429,
+        "macro_precision": 0.9806769949763944,
+        "macro_recall": 0.9803571428571429,
+        "macro_f1": 0.9803788150212986
+      },
+      "validation": {
+        "accuracy": 0.8333333333333334,
+        "balanced_accuracy": 0.8333333333333334,
+        "macro_precision": 0.8372897484352593,
+        "macro_recall": 0.8333333333333334,
+        "macro_f1": 0.8314911972746658
+      }
+    },
+    {
+      "run": "RF_3",
+      "parameters": {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      "train": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0
+      },
+      "validation": {
+        "accuracy": 0.8333333333333334,
+        "balanced_accuracy": 0.8333333333333334,
+        "macro_precision": 0.8412551908875439,
+        "macro_recall": 0.8333333333333334,
+        "macro_f1": 0.8324546861184792
+      }
+    }
+  ],
+  "best_run": "RF_1",
+  "best_parameters": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "min_samples_leaf": 2
+  },
+  "best_validation": {
+    "accuracy": 0.85,
+    "balanced_accuracy": 0.8500000000000001,
+    "macro_precision": 0.8529235019366599,
+    "macro_recall": 0.8500000000000001,
+    "macro_f1": 0.8480211379494897
+  },
+  "held_out_test": {
+    "accuracy": 0.8416666666666667,
+    "balanced_accuracy": 0.8416666666666667,
+    "macro_precision": 0.8449283559577677,
+    "macro_recall": 0.8416666666666667,
+    "macro_f1": 0.8412939431258397
+  },
+  "test_classification_report": {
+    "Anaemia": {
+      "precision": 0.7692307692307693,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.7142857142857143,
+      "support": 15.0
+    },
+    "Gastroenteritis": {
+      "precision": 0.8571428571428571,
+      "recall": 0.8,
+      "f1-score": 0.8275862068965517,
+      "support": 15.0
+    },
+    "Healthy": {
+      "precision": 0.8235294117647058,
+      "recall": 0.9333333333333333,
+      "f1-score": 0.875,
+      "support": 15.0
+    },
+    "Hypertension": {
+      "precision": 0.6666666666666666,
+      "recall": 0.8,
+      "f1-score": 0.7272727272727273,
+      "support": 15.0
+    },
+    "Influenza": {
+      "precision": 0.9285714285714286,
+      "recall": 0.8666666666666667,
+      "f1-score": 0.896551724137931,
+      "support": 15.0
+    },
+    "Migraine": {
+      "precision": 0.7142857142857143,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6896551724137931,
+      "support": 15.0
+    },
+    "Pneumonia": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 15.0
+    },
+    "Type2Diabetes": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 15.0
+    },
+    "accuracy": 0.8416666666666667,
+    "macro avg": {
+      "precision": 0.8449283559577677,
+      "recall": 0.8416666666666667,
+      "f1-score": 0.8412939431258397,
+      "support": 120.0
+    },
+    "weighted avg": {
+      "precision": 0.8449283559577677,
+      "recall": 0.8416666666666667,
+      "f1-score": 0.8412939431258396,
+      "support": 120.0
+    }
+  },
+  "test_confusion_matrix": [
+    [
+      10,
+      0,
+      0,
+      2,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      12,
+      2,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      14,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      12,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      13,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      4,
+      0,
+      10,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      15,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      15
+    ]
+  ],
+  "class_labels": [
+    "Anaemia",
+    "Gastroenteritis",
+    "Healthy",
+    "Hypertension",
+    "Influenza",
+    "Migraine",
+    "Pneumonia",
+    "Type2Diabetes"
+  ],
+  "mlflow_logged": true,
+  "tracking_uri": "sqlite:///C:/CynarisInternship/HealthBridge Hospitals/AI_Disease_Prediction_Week1/mlflow.db"
+}
