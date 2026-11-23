@@ -80,3 +80,15 @@ This model uses clinical measurements in addition to symptoms. Data provenance, 
 - MLflow support is coded, but MLflow was unavailable during packaging; after installing requirements, rerun the training script to create real MLflow experiment logs.
 - View tracking runs with `mlflow ui --backend-store-uri ./mlruns` after rerunning.
 
+
+## Week 9: Integration + Testing
+
+FastAPI model-serving endpoint: `python -m uvicorn backend.main:app --port 8000`
+
+Streamlit UI (separate terminal): `python -m streamlit run frontend/app.py`
+
+Integration tests: `python -m pytest tests/test_week9_integration.py -v`
+
+50-concurrent-request load test (API running): `python scripts/load_test_week9.py --concurrency 50 --requests 200`
+
+See `docs/week9_integration_guide.md` and `docs/week9_submission.md`. Benchmark measurements must be generated on the user's machine. This project is not clinically validated.
