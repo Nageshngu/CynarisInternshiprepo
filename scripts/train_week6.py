@@ -25,6 +25,7 @@ def main():
     records=[]; models=[]
     if mlflow:
         mlflow.set_tracking_uri((ROOT/'mlruns').resolve().as_uri())
+        mlflow.set_tracking_uri("sqlite:///mlflow.db")
         mlflow.set_experiment('DiseasePrediction-Week6')
     for idx,params in enumerate(configs,1):
         model=Pipeline([('preprocess',make_preprocessor(Xtr)),('classifier',RandomForestClassifier(**params,random_state=42,n_jobs=-1,class_weight='balanced'))])
