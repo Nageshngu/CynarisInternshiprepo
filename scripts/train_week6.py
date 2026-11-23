@@ -24,9 +24,8 @@ def main():
     configs=[{'n_estimators':100,'max_depth':5,'min_samples_leaf':2}, {'n_estimators':200,'max_depth':10,'min_samples_leaf':2}, {'n_estimators':300,'max_depth':None,'min_samples_leaf':1}]
     records=[]; models=[]
     if mlflow:
-        mlflow.set_tracking_uri((ROOT/'mlruns').resolve().as_uri())
-        mlflow.set_tracking_uri("sqlite:///mlflow.db")
-        mlflow.set_experiment('DiseasePrediction-Week6')
+        mlflow.set_tracking_uri(f"sqlite:///{(ROOT / 'mlflow.db').as_posix()}")
+        mlflow.set_experiment("DiseasePrediction-Week6")
     for idx,params in enumerate(configs,1):
         model=Pipeline([('preprocess',make_preprocessor(Xtr)),('classifier',RandomForestClassifier(**params,random_state=42,n_jobs=-1,class_weight='balanced'))])
         model.fit(Xtr,ytr)
@@ -42,7 +41,7 @@ def main():
     best_idx=max(range(len(records)),key=lambda i:(records[i]['validation']['macro_f1'],records[i]['validation']['balanced_accuracy']))
     best=records[best_idx]; model=models[best_idx]
     pred=model.predict(Xte)
-    result={'dataset_rows':len(df),'split':{'train':len(Xtr),'validation':len(Xv),'test':len(Xte)},'selection_metric':'validation_macro_f1','runs':records,'best_run':best['run'],'best_parameters':best['parameters'],'best_validation':best['validation'],'held_out_test':evaluate(yte,pred),'test_classification_report':classification_report(yte,pred,output_dict=True,zero_division=0),'test_confusion_matrix':confusion_matrix(yte,pred,labels=model.classes_).tolist(),'class_labels':model.classes_.tolist(),'mlflow_logged':bool(mlflow),'tracking_uri':str(ROOT/'mlruns') if mlflow else None}
+    result={'dataset_rows':len(df),'split':{'train':len(Xtr),'validation':len(Xv),'test':len(Xte)},'selection_metric':'validation_macro_f1','runs':records,'best_run':best['run'],'best_parameters':best['parameters'],'best_validation':best['validation'],'held_out_test':evaluate(yte,pred),'test_classification_report':classification_report(yte,pred,output_dict=True,zero_division=0),'test_confusion_matrix':confusion_matrix(yte,pred,labels=model.classes_).tolist(),'class_labels':model.classes_.tolist(),'mlflow_logged':bool(mlflow),'tracking_uri': mlflow.get_tracking_uri() if mlflow else None}
     (ROOT/'reports').mkdir(exist_ok=True)
     (ROOT/'models').mkdir(exist_ok=True)
     (ROOT/'reports/week6_experiments.json').write_text(json.dumps(result,indent=2))
