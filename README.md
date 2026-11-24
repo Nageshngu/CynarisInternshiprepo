@@ -1,6 +1,5 @@
 # AI-Powered Disease Prediction and Symptom Checker
 
-**Week 1 + Week 3 + Week 6 milestones completed (educational prototype).** Not a medical device. Predictions must not be used for diagnosis, treatment, or decisions to delay medical care.
 Week 1: Research + Architecture Design
 
 Educational prototype only. Not a medical device or clinical diagnosis tool. Never rely on model outputs to determine treatment or delay medical care. Urgent symptoms require professional assessment.
