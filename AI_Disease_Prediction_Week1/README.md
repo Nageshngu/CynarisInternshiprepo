@@ -104,9 +104,10 @@ Create your own repository and upload the project. The ZIP does not create a liv
 - Submission summary: `docs/week6_submission.md`
 - Selected model: `models/week6_best_random_forest.joblib`
 - MLflow support is coded, but MLflow was unavailable during packaging; after installing requirements, rerun the training script to create real MLflow experiment logs.
-- View tracking runs with `mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000` after rerunning.
+- View tracking runs with `python -m mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000` after rerunning.
 
 ## Week 9: Integration + Testing
+
 
 FastAPI model-serving endpoint: `python -m uvicorn backend.main:app --port 8000`
 
@@ -115,5 +116,9 @@ Streamlit UI (separate terminal): `python -m streamlit run frontend/app.py`
 Integration tests: `python -m pytest tests/test_week9_integration.py -v`
 
 50-concurrent-request load test (API running): `python scripts/load_test_week9.py --concurrency 50 --requests 200`
+
+ Frontend: http://localhost:8501
+- API Documentation: http://localhost:8000/docs
+- Health Check: http://localhost:8000/health
 
 See `docs/week9_integration_guide.md` and `docs/week9_submission.md`. Benchmark measurements must be generated on the user's machine. 
