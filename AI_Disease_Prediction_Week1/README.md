@@ -1,6 +1,66 @@
 # AI-Powered Disease Prediction and Symptom Checker
 
-**Week 1 + Week 3 + Week 6 milestones completed (educational prototype).** Not a medical device. Predictions must not be used for diagnosis, treatment, or decisions to delay medical care.
+Week 1: Research + Architecture Design
+
+Educational prototype only. Not a medical device or clinical diagnosis tool. Never rely on model outputs to determine treatment or delay medical care. Urgent symptoms require professional assessment.
+
+Week 1 deliverables
+
+docs/research_review.md: three technical references and their relevance (technical review; not a claim of clinical validation)
+
+docs/architecture.md: planned FastAPI + Streamlit + SHAP architecture
+
+docs/evaluation_plan.md: data splits, metrics, limitations and safety checks
+
+docs/week1_submission.md: milestone summary to adapt before submission
+
+scripts/inspect_dataset.py: runnable data inspection
+
+src/data_pipeline.py: preprocessing/split skeleton
+
+backend/main.py: initial API skeleton (no diagnostic endpoint)
+
+frontend/app.py: initial Streamlit screen (no predictions)
+
+data/raw/: supplied CSV, JSON and test cases
+
+Dataset
+
+The provided CSV has 800 rows, 17 columns and 8 diagnosis classes with 100 records per class. This does not establish clinical validity. Do not interpret example labels or scripted test expectations as ground truth.
+
+Run Week 1 inspection
+
+## Installation
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+## Dataset Inspection
+
+```powershell
+python scripts/inspect_dataset.py
+```
+
+## Start FastAPI Backend — Terminal 1
+
+```powershell
+python -m uvicorn backend.main:app --reload
+```
+
+## Start Streamlit Frontend — Terminal 2
+
+```powershell
+python -m streamlit run frontend/app.py
+```
+
+## Application URLs
+
+- Frontend: http://localhost:8501
+- API Documentation: http://localhost:8000/docs
+- Health Check: http://localhost:8000/health
+
+
 
 ## Week 3: Data pipeline + baseline model
 - CSV ingestion and validation: `src/data_pipeline.py`
@@ -56,4 +116,4 @@ Integration tests: `python -m pytest tests/test_week9_integration.py -v`
 
 50-concurrent-request load test (API running): `python scripts/load_test_week9.py --concurrency 50 --requests 200`
 
-See `docs/week9_integration_guide.md` and `docs/week9_submission.md`. Benchmark measurements must be generated on the user's machine. This project is not clinically validated.
+See `docs/week9_integration_guide.md` and `docs/week9_submission.md`. Benchmark measurements must be generated on the user's machine. 
