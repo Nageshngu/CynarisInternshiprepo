@@ -1,0 +1,39 @@
+{
+  "split": {
+    "train": 560,
+    "validation": 120,
+    "test": 120
+  },
+  "validation": {
+    "model": {
+      "accuracy": 0.8083,
+      "balanced_accuracy": 0.8083,
+      "macro_precision": 0.8115,
+      "macro_recall": 0.8083,
+      "macro_f1": 0.8068
+    },
+    "dummy": {
+      "accuracy": 0.125,
+      "balanced_accuracy": 0.125,
+      "macro_precision": 0.0156,
+      "macro_recall": 0.125,
+      "macro_f1": 0.0278
+    }
+  },
+  "test": {
+    "model": {
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8,
+      "macro_precision": 0.813,
+      "macro_recall": 0.8,
+      "macro_f1": 0.7989
+    },
+    "dummy": {
+      "accuracy": 0.125,
+      "balanced_accuracy": 0.125,
+      "macro_precision": 0.0156,
+      "macro_recall": 0.125,
+      "macro_f1": 0.0278
+    }
+  }
+}

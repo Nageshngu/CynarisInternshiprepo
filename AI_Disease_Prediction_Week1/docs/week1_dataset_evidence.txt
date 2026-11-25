@@ -1,0 +1,14 @@
+Rows, columns: (800, 17)
+Columns: ['Patient_ID', 'Age', 'Gender', 'Fever', 'Cough', 'Fatigue', 'Breathlessness', 'Chest_Pain', 'Nausea', 'Headache', 'BMI', 'BP_Systolic', 'BP_Diastolic', 'SpO2', 'Glucose_mg_dL', 'HbA1c', 'Diagnosis']
+Missing values: 0
+Duplicate rows: 0
+Diagnosis counts:
+Diagnosis
+Influenza          100
+Hypertension       100
+Type2Diabetes      100
+Pneumonia          100
+Healthy            100
+Anaemia            100
+Gastroenteritis    100
+Migraine           100
