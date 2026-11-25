@@ -104,7 +104,7 @@ Create your own repository and upload the project. The ZIP does not create a liv
 - Submission summary: `docs/week6_submission.md`
 - Selected model: `models/week6_best_random_forest.joblib`
 - MLflow support is coded, but MLflow was unavailable during packaging; after installing requirements, rerun the training script to create real MLflow experiment logs.
-- View tracking runs with `mlflow ui --backend-store-uri ./mlruns` after rerunning.
+- View tracking runs with `mlflow ui --backend-store-uri sqlite:///mlflow.db --port 5000` after rerunning.
 
 ## Week 9: Integration + Testing
 
