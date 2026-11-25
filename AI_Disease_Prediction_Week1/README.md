@@ -42,26 +42,6 @@ python -m pip install -r requirements.txt
 python scripts/inspect_dataset.py
 ```
 
-## Start FastAPI Backend — Terminal 1
-
-```powershell
-python -m uvicorn backend.main:app --reload
-```
-
-## Start Streamlit Frontend — Terminal 2
-
-```powershell
-python -m streamlit run frontend/app.py
-```
-
-## Application URLs
-
-- Frontend: http://localhost:8501
-- API Documentation: http://localhost:8000/docs
-- Health Check: http://localhost:8000/health
-
-
-
 ## Week 3: Data pipeline + baseline model
 - CSV ingestion and validation: `src/data_pipeline.py`
 - Stratified 70/15/15 split; preprocessing fitted only on training data
@@ -94,8 +74,7 @@ python -m unittest discover -s tests
 ## Limitations
 This model uses clinical measurements in addition to symptoms. Data provenance, licensing and medical validity are unverified. The API/UI and SHAP per-prediction explanations are planned work, not Week 3 deliverables. Do not publish patient data without authorization.
 
-## GitHub
-Create your own repository and upload the project. The ZIP does not create a live URL. Review dataset sharing permissions first.
+
 
 ## Week 6: Core model + experimentation
 - Three Random Forest hyperparameter configurations trained and compared.
@@ -117,8 +96,8 @@ Integration tests: `python -m pytest tests/test_week9_integration.py -v`
 
 50-concurrent-request load test (API running): `python scripts/load_test_week9.py --concurrency 50 --requests 200`
 
- Frontend: http://localhost:8501
+- Frontend: http://localhost:8501
 - API Documentation: http://localhost:8000/docs
 - Health Check: http://localhost:8000/health
 
-See `docs/week9_integration_guide.md` and `docs/week9_submission.md`. Benchmark measurements must be generated on the user's machine. 
+See `docs/week9_integration_guide.md` and `docs/week9_submission.md`. Benchmark measurements must be generated on the user's machine.  
